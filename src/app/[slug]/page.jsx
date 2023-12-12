@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-const page = () => {
+const CPage = () => {
   const router = useRouter();
   const searchParams = useSearchParams({});
   const search = searchParams.get("code");
@@ -155,4 +155,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CPage;
