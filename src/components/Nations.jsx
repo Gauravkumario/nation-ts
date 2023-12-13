@@ -91,7 +91,7 @@ function Nation() {
     <div className="dark:bg-[#202C37] dark:text-white">
       <div className="max-w-screen-xl m-auto px-6 py-6">
         <div className="md:flex justify-between items-center mb-8">
-          <div className="md:min-w-max flex gap-2 items-center drop-shadow-md rounded-md bg-white p-4 dark:bg-[#2B3945]">
+          <div className="md:min-w-max flex gap-2 items-center drop-shadow-md rounded-md bg-white p-4 mb-4 sm:mb-0 dark:bg-[#2B3945]">
             <IoIosSearch size={24} fill="gray" />
             <input
               type="text"
