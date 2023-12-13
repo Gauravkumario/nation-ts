@@ -37,11 +37,11 @@ const CPage = () => {
   }, [search]); // Empty dependency array to run the effect only once on mount
 
   if (isLoading) {
-    return <p className="text-center">Loading...</p>;
+    return <p className="text-center dark:text-white">Loading...</p>;
   }
 
   if (isError) {
-    return <p className="text-center">Error loading data</p>;
+    return <p className="text-center dark:text-white">Error loading data</p>;
   }
 
   const getFlagURL = (nation) => {
@@ -63,11 +63,11 @@ const CPage = () => {
   const commonValue = nativeNameValues[0]?.common;
 
   return (
-    <div className="max-w-screen-xl m-auto px-6 py-6">
+    <div className="max-w-screen-xl m-auto px-6 py-6 dark:text-white">
       <div>
         <button
           onClick={handleGoBack}
-          className="flex items-center gap-1 rounded drop-shadow-2xl bg-slate-100 px-6 py-2"
+          className="flex items-center gap-1 rounded drop-shadow-2xl bg-slate-100 px-6 py-2 dark:bg-[#2B3945]"
         >
           <IoIosArrowRoundBack size={20} />
           Back
@@ -139,7 +139,7 @@ const CPage = () => {
                 nation.borders.map((border, index) => (
                   <li
                     key={index}
-                    className="rounded drop-shadow-2xl bg-slate-100 px-6 py-2"
+                    className="rounded drop-shadow-2xl bg-slate-100 px-6 py-2 dark:bg-[#2B3945]"
                   >
                     <Link href={`/country?code=${border}`}>{border}</Link>
                   </li>

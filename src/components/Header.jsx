@@ -1,17 +1,14 @@
 import Link from "next/link";
-import { IoMoonOutline } from "react-icons/io5";
+import ToggleBtn from "./ToggleBtn";
 
 const Header = () => {
   return (
-    <div className="drop-shadow-lg border-b-4 border-solid border-black-100">
+    <div className={`drop-shadow-lg border-b-4 dark:border-none border-solid border-black-100 dark:bg-[#2B3945] dark:text-white custom`}>
       <nav className="max-w-screen-xl py-6 px-6 m-auto flex justify-between items-center">
         <span className="font-semibold md:text-lg">
           <Link href={"/"}>Where in the World?</Link>
         </span>
-        <button className="flex items-center gap-2 md:font-medium">
-          <IoMoonOutline size={20} />
-          Dark
-        </button>
+        <span><ToggleBtn /></span>
       </nav>
     </div>
   );
