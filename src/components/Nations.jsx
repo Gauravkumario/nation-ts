@@ -47,19 +47,19 @@ function Nation() {
     const region = event.target.value;
     setSelectedRegion(region);
     setSearchTerm(""); // Reset search term when region changes
-    filterCountries();
+    filterCountries(region);
   };
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  const filterCountries = () => {
+  const filterCountries = (region) => {
     let filtered = countries;
 
-    if (selectedRegion) {
+    if (region) {
       filtered = filtered.filter(
-        (country) => country.region === selectedRegion
+        (country) => country.region === region
       );
     }
 
